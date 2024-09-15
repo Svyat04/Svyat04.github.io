@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+        .navbar .logo {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            width: 60%;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+        form input[type="file"] {
+            padding: 5px;
+        }
+        form input[type="checkbox"] {
+            width: auto;
+        }
+        form input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 12px;
+            margin-top: 10px;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+        .form-right {
+            width: 35%;
+        }
+        .form-right h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .form-right p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .quick-inquiries {
+            margin-top: 20px;
+        }
+        .quick-inquiries p {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        .quick-inquiries img {
+            margin-right: 10px;
+        }
+        .newsletter {
+            margin-top: 20px;
+        }
+        .newsletter input {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .newsletter button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="container">
+        <div class="logo">LOGO</div>
+        <div>
+            <a href="#">Company</a>
+            <a href="#">Services</a>
+            <a href="#">FinTech Solutions</a>
+            <a href="#">Products</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact us</a>
+        </div>
+    </div>
+</div>
+
+<!-- Main content -->
+<div class="container">
+    <div class="form-container">
+        <form action="#" method="POST">
+            <h2>Contact us</h2>
+            <p>Need an experienced and skilled hand with custom IT projects? Fill out the form to get a free consultation.</p>
+            <input type="text" name="company_name" placeholder="Your Company Name" required>
+            <input type="text" name="business_nature" placeholder="Nature of Business" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="text" name="postcode" placeholder="Postcode" required>
+            <input type="text" name="contact_name" placeholder="Contact Name" required>
+            <input type="text" name="contact_phone" placeholder="Contact Phone" required>
+            <input type="email" name="email" placeholder="email@gmail.com" required>
+            <div class="error-message">Please, enter valid email address</div>
+            <input type="text" name="linkedin" placeholder="LinkedIn">
+            <textarea name="idea" placeholder="Let's talk about your idea" rows="5"></textarea>
+            <input type="file" name="additional_file">
+            <br>
+            <input type="checkbox" name="nda"> I want to protect my data by signing an NDA
+            <br>
+            <input type="submit" value="SUBMIT">
+        </form>
+
+        <div class="form-right">
+            <h3>Offices</h3>
+            <p>United States</p>
+            <p>500 5th Avenue Suite 400, NY 10110</p>
+            <p>United Kingdom</p>
+            <p>High St, Bromley BR1 1DN</p>
+            <p>France</p>
+            <p>80 avenue des Terroirs de France, Paris</p>
+            
+            <div class="quick-inquiries">
+                <h3>For Quick Inquiries</h3>
+                <p><img src="https://flagcdn.com/16x12/gb.png" alt="UK Flag"> +44 7777777777</p>
+                <p><img src="https://flagcdn.com/16x12/us.png" alt="US Flag"> +1 3333333330</p>
+            </div>
+            
+            <div class="newsletter">
+                <h3>Would you like to join our newsletter?</h3>
+                <input type="email" placeholder="Email">
+                <button type="submit">✔</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
