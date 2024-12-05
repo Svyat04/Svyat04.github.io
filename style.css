@@ -198,7 +198,40 @@ footer {
     font-size: 20px;
     font-weight: bold;
 }
-адаптивний
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+  .profile-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .contacts p {
+    font-size: 14px;
+  }
+
+  .section {
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 480px) {
   .header {
     padding: 15px;
@@ -222,9 +255,5 @@ footer {
 
   ul li {
     font-size: 12px;
-  }
-}
-  h2 {
-    font-size: 18px;
   }
 }
