@@ -199,19 +199,26 @@ footer {
     font-weight: bold;
 }
 
-/*Телефон*/
+/* Адаптивність */
 @media (max-width: 768px) {
-    body {
-      font-size: 14px;
-      padding: 10px;
-    }
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
+  body {
+    font-size: 16px;
   }
-  
-.btn:hover {
-    background: #000;
-    color: #fff;
+
+  .header, .section, .footer {
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
 }
