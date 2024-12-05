@@ -1,3 +1,4 @@
+/* Базові стилі */
 * {
     margin: 0;
     padding: 0;
@@ -10,11 +11,14 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     padding: 20px;
+    min-height: 100vh;
 }
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px;
     width: 100%;
     background-color: #c0efe0;
@@ -23,9 +27,10 @@ body {
     overflow: hidden;
 }
 
-/* Стиль лівої колонки */
+/* Ліва колонка */
 .sidebar {
-    width: 25%;
+    flex: 1 1 300px; /* Гнучкий розмір */
+    max-width: 300px;
     background-color: #06568b;
     color: #ffffff;
     padding: 20px;
@@ -53,15 +58,15 @@ body {
 }
 
 hr {
-    border: 2;
+    border: none;
     height: 2px;
     background: #ffffff30;
     margin: 10px 0;
 }
 
-/* Стиль основного контенту */
+/* Основний контент */
 .main-content {
-    width: 75%;
+    flex: 3 1 600px; /* Гнучкий розмір */
     padding: 30px;
 }
 
@@ -106,7 +111,7 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Стиль секцій */
+/* Секції */
 section {
     margin-bottom: 25px;
 }
@@ -117,24 +122,6 @@ section h2 {
     margin-bottom: 15px;
     border-bottom: 2px solid #f1f1f1;
     padding-bottom: 5px;
-}
-
-section h3 {
-    font-size: 1.3em;
-    color: #333;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-section p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Стиль секції проєктів */
-#portfolio {
-    margin-bottom: 30px;
 }
 
 .project {
@@ -164,30 +151,12 @@ section p {
     transform: scale(1.02);
 }
 
-/* Додаткові стилі для навичок і курсів */
-section h2, section h3 {
-    color: #333;
-}
-
-.section p {
-    color: #666;
-}
-
-footer {
-    text-align: center;
-    padding: 2px;
-    background: #000000;
-    color: #fff;
-    font-size: 0.9em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
+/* Кнопки */
 .btn {
     margin-top: 10px;
     display: block;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 50px;
     border: 1px solid #000;
     border-radius: 10px;
@@ -199,61 +168,76 @@ footer {
     font-weight: bold;
 }
 
-/* Адаптивність для мобільних */
-@media (max-width: 768px) {
-  .profile-img {
-    width: 80px;
-    height: 80px;
-  }
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
 
-  h1 {
-    font-size: 20px;
-  }
-
-  .contacts p {
-    font-size: 14px;
-  }
-
-  .section {
-    margin: 10px 0;
+/* Футер */
+footer {
+    display: none; /* Футер спочатку прихований */
+    background-color: #000;
+    color: #fff;
+    text-align: center;
     padding: 10px;
-  }
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
 
-  h2 {
-    font-size: 18px;
-  }
+/* Показувати футер, коли додається клас visible-footer */
+footer.visible-footer {
+    display: block;
+}
 
-  ul li {
-    font-size: 14px;
-  }
+/* Адаптивність */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Вертикальна розкладка */
+        align-items: center; /* Центрування */
+    }
 
-  .footer {
-    font-size: 12px;
-  }
+    .sidebar {
+        width: 100%; /* На весь екран */
+        text-align: center;
+    }
+
+    .main-content {
+        width: 100%; /* Розтягнути основний контент */
+    }
+
+    .btn {
+        max-width: 100%; /* Кнопки тягнуться */
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px) {
-  .header {
-    padding: 15px;
-  }
+    .sidebar {
+        padding: 15px;
+    }
 
-  h1 {
-    font-size: 18px;
-  }
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
 
-  .contacts p {
-    font-size: 12px;
-  }
+    header h1 {
+        font-size: 1.8em;
+    }
 
-  .section {
-    padding: 8px;
-  }
+    section h2 {
+        font-size: 1.2em;
+    }
 
-  h2 {
-    font-size: 16px;
-  }
+    .btn {
+        font-size: 14px;
+        height: 40px;
+    }
 
-  ul li {
-    font-size: 12px;
-  }
+    footer {
+        font-size: 0.8em;
+    }
 }
