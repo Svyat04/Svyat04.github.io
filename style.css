@@ -199,24 +199,38 @@ footer {
     font-weight: bold;
 }
 
-/* Адаптивність */
+/* Адаптивний дизайн */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
-  .header, .section, .footer {
-    padding: 15px;
-  }
-
-  .profile-img {
-    width: 80px;
-    height: 80px;
-  }
-
   h1 {
     font-size: 20px;
   }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contacts p {
+    font-size: 14px;
+  }
+
+  .section {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
 
   h2 {
     font-size: 18px;
