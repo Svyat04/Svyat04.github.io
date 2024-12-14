@@ -1,1 +1,25 @@
+<label><input type="checkbox" value="html"> HTML</label>
+<label><input type="checkbox" value="css"> CSS</label>
+<label><input type="checkbox" value="js"> JavaScript</label>
+<label><input type="checkbox" value="php"> PHP</label>
 
+<p id="text"></p>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const textParagraph = document.getElementById("text");
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+      let selectedLanguages = [];
+      
+      checkboxes.forEach(box => {
+        if (box.checked) {
+          selectedLanguages.push(box.value);
+        }
+      });
+      
+      textParagraph.textContent = selectedLanguages.join(", ");
+    });
+  });
+</script>
